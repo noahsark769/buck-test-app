@@ -9,19 +9,21 @@
 /* Begin PBXBuildFile section */
 		4F49A21B1F2AB1E200867684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49A21A1F2AB1E200867684 /* AppDelegate.swift */; };
 		4F49A21D1F2AB1E200867684 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F49A21C1F2AB1E200867684 /* ViewController.swift */; };
-		4F49A2201F2AB1E200867684 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F49A21E1F2AB1E200867684 /* Main.storyboard */; };
 		4F49A2221F2AB1E200867684 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F49A2211F2AB1E200867684 /* Assets.xcassets */; };
 		4F49A2251F2AB1E200867684 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F49A2231F2AB1E200867684 /* LaunchScreen.storyboard */; };
+		4F49A2311F2AC4D800867684 /* ObjcTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F49A2301F2AC4D800867684 /* ObjcTestView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4F49A2171F2AB1E200867684 /* BuckTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuckTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F49A21A1F2AB1E200867684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F49A21C1F2AB1E200867684 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4F49A21F1F2AB1E200867684 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F49A2211F2AB1E200867684 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F49A2241F2AB1E200867684 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F49A2261F2AB1E200867684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F49A22E1F2AC4D700867684 /* BuckTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BuckTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		4F49A22F1F2AC4D800867684 /* ObjcTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcTestView.h; sourceTree = "<group>"; };
+		4F49A2301F2AC4D800867684 /* ObjcTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcTestView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +58,12 @@
 			children = (
 				4F49A21A1F2AB1E200867684 /* AppDelegate.swift */,
 				4F49A21C1F2AB1E200867684 /* ViewController.swift */,
-				4F49A21E1F2AB1E200867684 /* Main.storyboard */,
 				4F49A2211F2AB1E200867684 /* Assets.xcassets */,
 				4F49A2231F2AB1E200867684 /* LaunchScreen.storyboard */,
 				4F49A2261F2AB1E200867684 /* Info.plist */,
+				4F49A22F1F2AC4D800867684 /* ObjcTestView.h */,
+				4F49A2301F2AC4D800867684 /* ObjcTestView.m */,
+				4F49A22E1F2AC4D700867684 /* BuckTest-Bridging-Header.h */,
 			);
 			path = BuckTest;
 			sourceTree = "<group>";
@@ -97,6 +101,7 @@
 					4F49A2161F2AB1E200867684 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 29P3YRFLV5;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -126,7 +131,6 @@
 			files = (
 				4F49A2251F2AB1E200867684 /* LaunchScreen.storyboard in Resources */,
 				4F49A2221F2AB1E200867684 /* Assets.xcassets in Resources */,
-				4F49A2201F2AB1E200867684 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F49A2311F2AC4D800867684 /* ObjcTestView.m in Sources */,
 				4F49A21D1F2AB1E200867684 /* ViewController.swift in Sources */,
 				4F49A21B1F2AB1E200867684 /* AppDelegate.swift in Sources */,
 			);
@@ -145,14 +150,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4F49A21E1F2AB1E200867684 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4F49A21F1F2AB1E200867684 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4F49A2231F2AB1E200867684 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -261,11 +258,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 29P3YRFLV5;
 				INFOPLIST_FILE = BuckTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.noahgilmore.BuckTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BuckTest/BuckTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -274,11 +274,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 29P3YRFLV5;
 				INFOPLIST_FILE = BuckTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.noahgilmore.BuckTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BuckTest/BuckTest-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

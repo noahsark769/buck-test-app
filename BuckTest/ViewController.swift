@@ -8,11 +8,30 @@
 
 import UIKit
 
+class TestView: UIView {
+  init() {
+    super.init(frame: .zero)
+    self.backgroundColor = .red
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+}
+
 class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    view = UIView()
+    view.backgroundColor = .white
+
+    let testView = ObjcTestView()
+    testView.translatesAutoresizingMaskIntoConstraints = false
+    view.addSubview(testView)
+
+    NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:|-20-[testView]-20-|", options: [], metrics: nil, views: ["testView": testView]))
+    NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[testView]-|", options: [], metrics: nil, views: ["testView": testView]))
   }
 
   override func didReceiveMemoryWarning() {

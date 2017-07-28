@@ -1,0 +1,36 @@
+apple_resource(
+  name = 'BuckTestAppResources',
+  files = glob(['*.png']),
+  dirs = [],
+)
+
+apple_bundle(
+  name = 'BuckTestApp',
+  binary = ':BuckTestAppBinary',
+  extension = 'app',
+  info_plist = 'Info.plist',
+  tests = [],
+)
+
+apple_binary(
+  name = 'BuckTestAppBinary',
+  deps = [':BuckTestAppResources'],
+  preprocessor_flags = ['-fobjc-arc', '-Wno-objc-designated-initializers'],
+  bridging_header = 'BuckTest-Bridging-Header.h',
+  headers = glob([
+    '*.h',
+  ]),
+  srcs = glob([
+    '*.swift',
+    '*.m',
+  ]),
+  frameworks = [
+    '$SDKROOT/System/Library/Frameworks/UIKit.framework',
+    '$SDKROOT/System/Library/Frameworks/Foundation.framework',
+  ],
+)
+
+apple_package(
+  name = 'BuckTestAppPackage',
+  bundle = ':BuckTestApp',
+)
