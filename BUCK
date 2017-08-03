@@ -12,7 +12,7 @@ apple_library(
 
 apple_resource(
   name = 'BuckTestAppResources',
-  files = glob(['*.png']),
+  files = glob(['BuckTest/*.png']),
   dirs = [],
 )
 
@@ -20,7 +20,7 @@ apple_bundle(
   name = 'BuckTestApp',
   binary = ':BuckTestAppBinary',
   extension = 'app',
-  info_plist = 'Info.plist',
+  info_plist = 'BuckTest/Info.plist',
   tests = [],
 )
 
@@ -28,13 +28,13 @@ apple_binary(
   name = 'BuckTestAppBinary',
   deps = [':BuckTestAppResources', ':TinyConstraints'],
   preprocessor_flags = ['-fobjc-arc', '-Wno-objc-designated-initializers'],
-  bridging_header = 'BuckTest-Bridging-Header.h',
+  bridging_header = 'BuckTest/BuckTest-Bridging-Header.h',
   headers = glob([
-    '*.h',
+    'BuckTest/**/*.h',
   ]),
   srcs = glob([
-    '*.swift',
-    '*.m',
+    'BuckTest/**/*.swift',
+    'BuckTest/**/*.m',
   ]),
   frameworks = [
     '$SDKROOT/System/Library/Frameworks/UIKit.framework',
