@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TinyConstraints
 
 class TestView: UIView {
   init() {
@@ -30,8 +31,7 @@ class ViewController: UIViewController {
     testView.translatesAutoresizingMaskIntoConstraints = false
     view.addSubview(testView)
 
-    NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "V:|-20-[testView]-20-|", options: [], metrics: nil, views: ["testView": testView]))
-    NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[testView]-|", options: [], metrics: nil, views: ["testView": testView]))
+    testView.edges(to: view, insets: UIEdgeInsets(top: 40, left: 40, bottom: -40, right: -40))
   }
 
   override func didReceiveMemoryWarning() {

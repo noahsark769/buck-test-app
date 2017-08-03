@@ -1,2 +1,5 @@
 buck-out
 .buckd
+vendor/
+Pods/
+BuckTest.xcworkspace/contents.xcworkspacedata

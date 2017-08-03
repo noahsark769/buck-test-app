@@ -1,3 +1,15 @@
+apple_library(
+  name = 'TinyConstraints',
+  visibility = ['PUBLIC'],
+  exported_headers = glob([]),
+  srcs = glob([
+    'Pods/TinyConstraints/**/*.swift',
+  ]),
+  frameworks = [
+    '$SDKROOT/System/Library/Frameworks/Foundation.framework'
+  ],
+)
+
 apple_resource(
   name = 'BuckTestAppResources',
   files = glob(['*.png']),
@@ -14,7 +26,7 @@ apple_bundle(
 
 apple_binary(
   name = 'BuckTestAppBinary',
-  deps = [':BuckTestAppResources'],
+  deps = [':BuckTestAppResources', ':TinyConstraints'],
   preprocessor_flags = ['-fobjc-arc', '-Wno-objc-designated-initializers'],
   bridging_header = 'BuckTest-Bridging-Header.h',
   headers = glob([
