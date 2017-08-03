@@ -12,7 +12,7 @@ import TinyConstraints
 class TestView: UIView {
   init() {
     super.init(frame: .zero)
-    self.backgroundColor = .red
+    self.backgroundColor = .blue
   }
   
   required init?(coder aDecoder: NSCoder) {

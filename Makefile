@@ -8,4 +8,4 @@ pods:
 
 .PHONY: install
 install:
-	buck install -r //BuckTest:BuckTestApp
+	buck install -r :BuckTestApp
